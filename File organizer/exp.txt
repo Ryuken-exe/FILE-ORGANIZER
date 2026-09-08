@@ -1,0 +1,3 @@
+PANEER = 70
+TOFU = 52*2(104)
+Dahi = 50

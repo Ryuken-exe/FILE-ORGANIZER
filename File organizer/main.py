@@ -1,5 +1,6 @@
-with open("exp.txt","w") as file:
-    file.write("PANEER = 70")
+with open("exp.txt","a") as file:
+    file.write("<WEEKLY PROTEIN EXPENSES>")
+    file.write("\nPANEER = 70")
     file.write("\nTOFU = 52*2(104)")
     file.write("\nDahi = 50")
 

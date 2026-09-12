@@ -8,6 +8,10 @@ if os.path.exists(path):
 		full_path = os.path.join(path,file)
 		if os.path.isfile(full_path):
 			print(full_path)
+			full_path = Path(full_path)
+			extension = full_path.suffix
+			print(extension)
+	
 
 else:
 	print("Sorry Invalid Path")

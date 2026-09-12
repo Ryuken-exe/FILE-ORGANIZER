@@ -1,0 +1,84 @@
+Haan. File Organizer banane ke liye pathlib ke ye functions/methods sabse important hain:
+
+1. Path banana
+Path("Downloads")
+2. exists()
+
+Path/file exist karta hai ya nahi.
+
+path.exists()
+3. is_file()
+
+Path ek file hai ya nahi.
+
+path.is_file()
+4. is_dir()
+
+Path ek folder hai ya nahi.
+
+path.is_dir()
+5. iterdir()
+
+Folder ke andar ki files/folders ko iterate karna.
+
+for item in path.iterdir():
+    print(item)
+
+File Organizer mein extremely important.
+
+6. suffix
+
+File ka extension nikalna.
+
+file.suffix
+
+Example:
+
+report.pdf → .pdf
+photo.jpg  → .jpg
+song.mp3   → .mp3
+7. name
+
+File/folder ka naam.
+
+file.name
+8. stem
+
+Extension hata kar filename.
+
+file.stem
+report.pdf → report
+9. parent
+
+File kis folder ke andar hai.
+
+file.parent
+10. mkdir()
+
+New folder banana.
+
+path.mkdir()
+11. rename()
+
+File/folder ko rename ya move karna.
+
+file.rename(new_path)
+12. unlink()
+
+File delete karna.
+
+file.unlink()
+Tumhare File Organizer ke liye priority
+
+Sabse pehle ye 8 seekho:
+
+Path()
+exists()
+is_file()
+is_dir()
+iterdir()
+suffix
+mkdir()
+rename()
+
+Inke baad name, stem, parent, unlink() seekhna.

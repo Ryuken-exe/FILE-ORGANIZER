@@ -1,0 +1,234 @@
+🔥 Python os Module – Important Functions
+
+Python ka os module operating system ke saath interact karne ke liye use hota hai.
+Iski help se hum files aur folders ko create, delete, rename, move aur check kar sakte hain.
+
+Sabse pehle:
+
+import os
+
+📂 1. os.listdir()
+
+Kaam: Kisi folder ke andar kitni files aur folders ki list deta hai.
+
+os.listdir("Downloads")
+
+
+Example Output:
+
+['file1.txt', 'photo.jpg', 'notes.pdf']
+
+
+👉 Yaad rakho: listdir() = folder ke andar kya hai?
+
+🛣️ 2. os.path.join()
+
+Kaam: Folder aur filename ko safely combine karke ek proper file path banata hai.
+
+folder = "Downloads"
+file = "notes.pdf"
+
+path = os.path.join(folder, file)
+print(path)
+
+
+Output:
+
+Downloads/notes.pdf
+
+
+👉 Yaad rakho: join() = path banana
+
+✅ 3. os.path.exists()
+
+Kaam: Check karta hai ki given path/file/folder exist karta hai ya nahi.
+
+os.path.exists("notes.pdf")
+
+
+Result:
+
+True
+
+
+ya
+
+False
+
+
+👉 Yaad rakho: exists() = kya ye exist karta hai?
+
+📄 4. os.path.isfile()
+
+Kaam: Check karta hai ki given path ek file hai ya nahi.
+
+os.path.isfile("notes.pdf")
+
+
+Result:
+
+True
+
+
+👉 Yaad rakho: isfile() = kya ye file hai?
+
+📁 5. os.path.isdir()
+
+Kaam: Check karta hai ki given path ek directory/folder hai ya nahi.
+
+os.path.isdir("Downloads")
+
+
+Result:
+
+True
+
+
+👉 Yaad rakho: isdir() = kya ye folder hai?
+
+✂️ 6. os.path.splitext()
+
+Kaam: Filename ko name + extension mein separate karta hai.
+
+os.path.splitext("abc.pdf")
+
+
+Output:
+
+('abc', '.pdf')
+
+
+Ek aur example:
+
+name, extension = os.path.splitext("photo.jpg")
+
+print(name)
+print(extension)
+
+
+Output:
+
+photo
+.jpg
+
+
+👉 Yaad rakho: splitext() = filename aur extension separate karna
+
+📂 7. os.mkdir()
+
+Kaam: Ek new folder/directory create karta hai.
+
+os.mkdir("PDFs")
+
+
+Isse current location mein PDFs naam ka folder ban jayega.
+
+⚠️ Agar folder already exist karta hai, to error aa sakta hai.
+
+👉 Yaad rakho: mkdir() = ek folder banana
+
+📂 8. os.makedirs()
+
+Kaam: Ek saath nested/multiple folders create kar sakta hai.
+
+os.makedirs("Files/PDFs")
+
+
+Isse:
+
+Files
+└── PDFs
+
+
+structure create hoga.
+
+👉 Yaad rakho: makedirs() = multiple/nested folders banana
+
+🔄 9. os.rename()
+
+Kaam: File ya folder ko rename ya move kar sakta hai.
+
+Rename:
+os.rename("old.txt", "new.txt")
+
+Move:
+os.rename("old.txt", "Documents/old.txt")
+
+
+👉 Yaad rakho: rename() = rename / move
+
+🗑️ 10. os.remove()
+
+Kaam: Ek file delete karta hai.
+
+os.remove("old.txt")
+
+
+⚠️ os.remove() normally file delete karne ke liye use hota hai, folder delete karne ke liye nahi.
+
+👉 Yaad rakho: remove() = file delete
+
+📍 11. os.getcwd()
+
+Full Form: Get Current Working Directory
+
+Kaam: Batata hai ki Python abhi kis folder/location mein kaam kar raha hai.
+
+print(os.getcwd())
+
+
+Example Output:
+
+C:\Users\Rahul\Documents
+
+
+👉 Yaad rakho: getcwd() = abhi main kis folder mein hoon?
+
+🚶 12. os.chdir()
+
+Full Form: Change Directory
+
+Kaam: Current working directory ko change karta hai.
+
+os.chdir("Downloads")
+
+
+Ab Python ka working directory Downloads ho jayega.
+
+Check karne ke liye:
+
+print(os.getcwd())
+
+
+👉 Yaad rakho: chdir() = working folder change karna
+
+🧠 Quick Revision Table
+Function	Kaam	Easy Trick
+os.listdir()	Folder ke andar files/folders dekhna	📋 List
+os.path.join()	File path banana	🛣️ Join
+os.path.exists()	Path exist karta hai?	✅ Exists
+os.path.isfile()	Path file hai?	📄 File
+os.path.isdir()	Path folder hai?	📁 Directory
+os.path.splitext()	Name aur extension separate karna	✂️ Split
+os.mkdir()	Ek folder banana	📁 Make Directory
+os.makedirs()	Nested folders banana	📂 Multiple Directories
+os.rename()	Rename/move karna	🔄 Rename
+os.remove()	File delete karna	🗑️ Remove
+os.getcwd()	Current location dekhna	📍 Get Current
+os.chdir()	Location change karna	🚶 Change Directory
+🔥 Super Short Memory Trick
+
+listdir → List
+join → Path Join
+exists → Exist Check
+isfile → File Check
+isdir → Folder Check
+splitext → Name + Extension
+mkdir → Folder Create
+makedirs → Nested Folders Create
+rename → Rename/Move
+remove → Delete File
+getcwd → Current Location
+chdir → Location Change
+
+💡 Exam Tip: os.path wale functions mostly path ko check/process karne ke liye hote hain, jabki os ke functions files/folders par action perform karte hain.

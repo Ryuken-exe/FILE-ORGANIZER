@@ -1,0 +1,52 @@
+🧰 Python shutil Notes
+
+shutil = Shell Utilities
+
+Python ka built-in module hai jo files aur folders ko copy, move, rename, delete etc. karne ke kaam aata hai.
+
+1. Import
+import shutil
+2. Copy File
+shutil.copy("source.txt", "destination/")
+
+Copies the file and permissions.
+
+3. Copy File + Metadata
+shutil.copy2("source.txt", "destination/")
+
+Copies file along with metadata like modification time.
+
+4. Copy Folder
+shutil.copytree("source_folder", "destination_folder")
+
+Copies an entire folder.
+
+5. Move File
+shutil.move("file.txt", "destination/")
+
+Moves a file from one location to another.
+
+👉 Tumhare File Organizer project mein ye use hua hai:
+
+shutil.move(str(file), str(destination))
+6. Delete Folder
+shutil.rmtree("folder_name")
+
+⚠️ Folder aur uske andar ka data permanently delete kar sakta hai.
+
+7. Check Disk Usage
+shutil.disk_usage("/")
+
+Returns:
+
+total
+used
+free
+🔥 Most Important
+Function	Use
+shutil.copy()	Copy file
+shutil.copy2()	Copy file + metadata
+shutil.copytree()	Copy folder
+shutil.move()	Move file/folder
+shutil.rmtree()	Delete folder
+shutil.disk_usage()	Check disk space
